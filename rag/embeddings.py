@@ -1,7 +1,6 @@
 from sentence_transformers import SentenceTransformer
-from config import EMBEDDING_MODEL
 
-model = SentenceTransformer(EMBEDDING_MODEL)
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 def get_text_embedding(text):
     return model.encode(text)
