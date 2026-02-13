@@ -15,13 +15,13 @@ query = st.text_input("Enter your question")
 
 if uploaded_file:
     text = uploaded_file.read().decode("utf-8")
-    chunks = chunk_text(text, config.CHUNK_SIZE)
+    chunks = chunk_text(text, 500)
 
     vector_store = VectorStore()
-
     vector_store.add_texts(chunks)
 
     st.success("Document processed!")
+
 
 if st.button("Ask"):
     if query:
@@ -44,6 +44,7 @@ if uploaded_file:
     vector_store.add_texts(chunks)
 
     st.success("Document processed!")
+
 
 
 
