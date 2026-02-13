@@ -34,3 +34,14 @@ if st.button("Ask"):
 if image_file:
     image_embedding = get_image_embedding(image_file)
     st.success("Image embedding created!")
+    
+if uploaded_file:
+    text = uploaded_file.read().decode("utf-8")
+    chunks = chunk_text(text, 500)
+
+    vector_store = VectorStore(dimension=384)
+    vector_store.add_texts(chunks)
+
+    st.success("Document processed!")
+
+
