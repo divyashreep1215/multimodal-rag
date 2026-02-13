@@ -24,6 +24,7 @@ This application allows users to upload documents (PDF) and ask context-aware qu
 ## 🏗️ Project Structure
 
 multimodal_rag/
+
 │
 ├── app.py
 ├── config.py
