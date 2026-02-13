@@ -1,9 +1,6 @@
 import os
 
-OPENAI_API_KEY = "your_openai_key"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-EMBEDDING_MODEL = "all-MiniLM-L6-v2"
-LLM_MODEL = "gpt-4o-mini"
+LLM_MODEL = "llama3-8b-8192"
 
-CHUNK_SIZE = 500
-TOP_K = 3
