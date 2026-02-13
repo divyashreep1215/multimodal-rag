@@ -1,8 +1,7 @@
 from sentence_transformers import SentenceTransformer
-import numpy as np
-import config
+from config import EMBEDDING_MODEL
 
-model = SentenceTransformer(config.EMBEDDING_MODEL)
+model = SentenceTransformer(EMBEDDING_MODEL)
 
 def get_text_embedding(text):
     return model.encode(text)
