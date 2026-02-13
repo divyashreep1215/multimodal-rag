@@ -17,7 +17,8 @@ if uploaded_file:
     text = uploaded_file.read().decode("utf-8")
     chunks = chunk_text(text, config.CHUNK_SIZE)
 
-    vector_store = VectorStore(dimension=384)
+    vector_store = VectorStore()
+
     vector_store.add_texts(chunks)
 
     st.success("Document processed!")
@@ -43,5 +44,6 @@ if uploaded_file:
     vector_store.add_texts(chunks)
 
     st.success("Document processed!")
+
 
 
