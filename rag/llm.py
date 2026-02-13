@@ -1,7 +1,7 @@
-from openai import OpenAI
+from groq import Groq
 import config
 
-client = OpenAI(api_key=config.OPENAI_API_KEY)
+client = Groq(api_key=config.GROQ_API_KEY)
 
 def generate_answer(query, context_docs):
     context = "\n\n".join(context_docs)
@@ -20,7 +20,7 @@ Question:
 
     response = client.chat.completions.create(
         model=config.LLM_MODEL,
-        messages=[{"role": "user", "content": prompt}]
+        messages=[{"role": "user", "content": prompt}],
     )
 
     return response.choices[0].message.content
