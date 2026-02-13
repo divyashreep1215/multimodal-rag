@@ -1,8 +1,8 @@
 streamlit
-openai
 faiss-cpu
 sentence-transformers
 transformers
 torch
 Pillow
 numpy
+groq
