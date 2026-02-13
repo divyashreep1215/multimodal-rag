@@ -21,20 +21,17 @@ This application allows users to upload documents (PDF) and ask context-aware qu
 
 ---
 
-## 🏗️ Project Structure
-
 multimodal_rag/
-
 │
 ├── app.py
 ├── config.py
 ├── requirements.txt
 │
 └── rag/
-├── init.py
-├── embeddings.py
-├── retriever.py
-├── reranker.py
-├── chunking.py
-├── llm.py
-├── vision.py
+    ├── __init__.py
+    ├── embeddings.py
+    ├── retriever.py
+    ├── reranker.py
+    ├── chunking.py
+    ├── llm.py
+    ├── vision.py
